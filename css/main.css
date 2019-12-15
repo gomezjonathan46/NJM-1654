@@ -1,0 +1,114 @@
+@font-face {
+  font-family: 'Archer';
+  src: url("../assets/Archer-Medium.woff");
+  font-weight: normal;
+}
+
+body {
+  font-family: 'Archer', times, serif;
+  margin: 0;
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  position: relative;
+  color: #FFF;
+  text-decoration: none;
+  display: block;
+  overflow: hidden;
+  border: 1px solid #000;
+  width: 726px;
+  height: 88px;
+}
+
+.images {
+  z-index: 1;
+}
+
+.images::before, .images::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 185px;
+  width: 290px;
+  transition: width 2s linear;
+  height: 100%;
+  background-repeat: no-repeat;
+}
+
+.images::before {
+  z-index: 2;
+  background-image: url("../assets/PLAYGROUND.jpg");
+}
+
+.images::after {
+  background-image: url("../assets/BIRDWATCHER.jpg");
+}
+
+.images.current::before {
+  width: 0;
+}
+
+.whiteContainerBottom {
+  background-color: white;
+  width: 253px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+}
+
+.whiteContainerBottom .infoAndCTA {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 12px 32px;
+  font-weight: 900;
+}
+
+.whiteContainerBottom .infoAndCTA .info {
+  color: #464238;
+  font-size: 20px;
+  margin: 0 0 10px 0;
+  line-height: 1;
+}
+
+.whiteContainerBottom .infoAndCTA .CTA {
+  color: #0b79bf;
+  font-size: 11px;
+  margin: 0;
+}
+
+.whiteContainerBottom .infoAndCTA .CTA:hover {
+  color: #30b19c;
+}
+
+.whiteContainerTop {
+  background-color: white;
+  width: 185px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  align-items: center;
+}
+
+.whiteContainerTop .logo {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.whiteContainerTop .logo img {
+  width: 153px;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
